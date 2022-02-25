@@ -16,9 +16,9 @@ def setUp():
     driver.maximize_window()
     driver.implicitly_wait(30)
     driver.get(locators.adshopcart_url)
-    sleep(2)
+    get_title = driver.title
     if driver.current_url == locators.adshopcart_url and\
-        driver.find_element(By.XPATH, '//span[contains(., "dvantage")]').is_displayed():
+        driver.title == get_title:
         print(f'Welcome to Advantage online shopping homepage {driver.current_url}')
     else:
         print(f'We are not at the Advantage online shopping homepage. Check your code!')
