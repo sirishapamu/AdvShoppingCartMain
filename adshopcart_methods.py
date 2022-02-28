@@ -16,7 +16,7 @@ def setUp():
     driver.maximize_window()
     driver.implicitly_wait(30)
     driver.get(locators.adshopcart_url)
-    if driver.current_url == locators.adshopcart_url and driver.title == driver.title:
+    if driver.current_url == locators.adshopcart_url and driver.title == "\xa0Advantage Shopping":
         print(f'Welcome to Advantage online shopping homepage {driver.current_url} with Title {driver.title}')
     else:
         print(f'We are not at the Advantage online shopping homepage. Check your code!')
