@@ -24,3 +24,4 @@ class AdvShoppingPositiveTestCases(unittest.TestCase):
         methods.check_advshoppingcart_homepage()
         methods.check_top_navigation_menu()
         methods.check_contact_us_form()
+        methods.tearDown()
