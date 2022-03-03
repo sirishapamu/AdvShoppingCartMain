@@ -8,7 +8,7 @@ from selenium.webdriver.common.keys import Keys
 import adshopcart_locators as locators
 
 
-driver = webdriver.Chrome('C:/Users/Sirisha/PycharmProjects/pythonProject/chromedriver.exe')
+driver = webdriver.Chrome('C:/Users/Sirisha/PycharmProjects/chromedriver.exe')
 
 
 def setUp():
@@ -278,25 +278,19 @@ def check_contact_us_form():
     if driver.current_url == locators.adshopcart_url:
         assert driver.find_element(By.XPATH, f'//h1[contains(., "CONTACT US")]').is_displayed()
         Select(driver.find_element(By.NAME, 'categoryListboxContactUs')).select_by_visible_text('Laptops')
+        sleep(0.5)
         Select(driver.find_element(By.NAME, 'productListboxContactUs')).select_by_visible_text('HP Chromebook 14 G1(ENERGY STAR)')
+        sleep(0.5)
         driver.find_element(By.NAME, 'emailContactUs').send_keys(locators.email)
+        sleep(0.5)
+        driver.find_element(By.NAME, 'subjectTextareaContactUs').clear()
         driver.find_element(By.NAME, 'subjectTextareaContactUs').send_keys(locators.description)
         driver.find_element(By.ID, 'send_btnundefined').click()
+        sleep(0.25)
         driver.find_element(By.XPATH, f'//a[contains(., " CONTINUE SHOPPING ")]').click()
+        sleep(0.25)
 
 
 
-
-
-# setUp()
-# sign_up()
-# check_account_info()
-# logout()
-# login(locators.new_username, locators.new_password)
-# delete_account()
-# login(locators.new_username, locators.new_password)
-# check_deleted_credentials()
-# check_homepage()
-# tearDown()
 
 

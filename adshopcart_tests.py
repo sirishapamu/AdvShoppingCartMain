@@ -7,6 +7,10 @@ class AdvShoppingPositiveTestCases(unittest.TestCase):
     @staticmethod
     def test_open_adv_shopping_cart():
         methods.setUp()
+        methods.check_contact_us_form()
+        methods.check_main_logo()
+        methods.check_advshoppingcart_homepage()
+        methods.check_top_navigation_menu()
         methods.sign_up()
         methods.check_account_info()
         methods.logout()
@@ -17,11 +21,3 @@ class AdvShoppingPositiveTestCases(unittest.TestCase):
         methods.tearDown()
 
 
-    @staticmethod
-    def test_check_adv_shopping_cart_homepage():
-        methods.setUp()
-        methods.check_main_logo()
-        methods.check_advshoppingcart_homepage()
-        methods.check_top_navigation_menu()
-        methods.check_contact_us_form()
-        methods.tearDown()
